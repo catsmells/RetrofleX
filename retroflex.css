@@ -11,7 +11,7 @@ body {
   left: 10px;
   background-color: #7A4419; /* Dark brown button */
   color: #D7BE82; /* Light tan text */
-  border: .5px solid #755C1B; /* Medium brown border */
+  border: 2px solid #755C1B; /* Medium brown border */
   padding: 10px;
   cursor: pointer;
   font-size: 14px;
@@ -23,7 +23,7 @@ body {
   height: 200px;
   background-color: #515A47; /* Olive green window background */
   color: #D7BE82; /* Light tan text */
-  border: .5px solid #755C1B; /* Medium brown border */
+  border: 0.5px solid #755C1B; /* Fine medium brown border */
   border-radius: 5px; /* Slightly rounded corners */
   position: absolute;
   top: 50px;
@@ -31,6 +31,8 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Outer shadow for the window */
   font-size: 14px;
   z-index: 1; /* Default z-index */
+  display: flex;
+  flex-direction: column;
 }
 
 .title-bar {
@@ -60,5 +62,24 @@ body {
 }
 
 .content {
+  flex: 1; /* Allow content to expand */
   padding: 10px;
+  overflow: auto; /* Allow scrolling if content is too large */
+}
+
+.resize-handle {
+  width: 20px;
+  height: 20px;
+  background: repeating-linear-gradient(
+      45deg,
+      #7A4419, /* Dark brown */
+      #7A4419 4px,
+      #D7BE82 4px,
+      #D7BE82 8px
+  ); /* Diagonal stripes for a retro look */
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  cursor: se-resize; /* Resize cursor */
+  border-bottom-right-radius: 5px; /* Match the window's border radius */
 }
