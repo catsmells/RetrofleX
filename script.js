@@ -43,7 +43,7 @@ function createNewWindow() {
             <button class="close-btn">X</button>
         </div>
         <div class="content">
-            <p>This is a new retro window.</p>
+            <p>This is a new RetrofleX window.</p>
         </div>
     `;
     document.body.appendChild(newWindow);
