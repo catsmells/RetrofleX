@@ -1,8 +1,12 @@
-// Function to make windows draggable
+// Function to make windows draggable and handle z-index
 function makeDraggable(element) {
     let offsetX, offsetY, mouseX, mouseY;
 
     element.querySelector('.title-bar').addEventListener('mousedown', function(e) {
+        // Bring the window to the front
+        document.querySelectorAll('.window').forEach(win => win.style.zIndex = 1);
+        element.style.zIndex = 2;
+
         offsetX = e.clientX - element.getBoundingClientRect().left;
         offsetY = e.clientY - element.getBoundingClientRect().top;
         document.addEventListener('mousemove', moveWindow);
