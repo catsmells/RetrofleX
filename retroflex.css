@@ -1,0 +1,57 @@
+body {
+  background-color: #D7BE82; /* Light tan background */
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
+  padding: 0;
+}
+
+#new-window-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #7A4419; /* Dark brown button */
+  color: #D7BE82; /* Light tan text */
+  border: 2px solid #755C1B; /* Medium brown border */
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.window {
+  width: 300px;
+  height: 200px;
+  background-color: #515A47; /* Olive green window background */
+  color: #D7BE82; /* Light tan text */
+  border: 2px solid #755C1B; /* Medium brown border */
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  font-size: 14px;
+}
+
+.title-bar {
+  background-color: #7A4419; /* Dark brown title bar */
+  padding: 5px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.close-btn {
+  background-color: #400406; /* Dark red close button */
+  border: none;
+  color: #D7BE82; /* Light tan text */
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.content {
+  padding: 10px;
+}
