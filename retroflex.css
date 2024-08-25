@@ -11,7 +11,7 @@ body {
   left: 10px;
   background-color: #7A4419; /* Dark brown button */
   color: #D7BE82; /* Light tan text */
-  border: 2px solid #755C1B; /* Medium brown border */
+  border: .5px solid #755C1B; /* Medium brown border */
   padding: 10px;
   cursor: pointer;
   font-size: 14px;
@@ -23,12 +23,14 @@ body {
   height: 200px;
   background-color: #515A47; /* Olive green window background */
   color: #D7BE82; /* Light tan text */
-  border: 2px solid #755C1B; /* Medium brown border */
+  border: .5px solid #755C1B; /* Medium brown border */
+  border-radius: 5px; /* Slightly rounded corners */
   position: absolute;
   top: 50px;
   left: 50px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6); /* Outer shadow for the window */
   font-size: 14px;
+  z-index: 1; /* Default z-index */
 }
 
 .title-bar {
@@ -38,6 +40,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top-left-radius: 5px; /* Match the window border radius */
+  border-top-right-radius: 5px; /* Match the window border radius */
+  position: relative;
+  z-index: 2; /* Ensure title bar is above the window content */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), inset 0 1px 2px rgba(0, 0, 0, 0.3); /* Bezel effect for title bar */
 }
 
 .title {
